@@ -5,14 +5,14 @@ void main() => runApp(const VidyutKosh());
 class VidyutKosh extends StatelessWidget {
   const VidyutKosh({Key? key}) : super(key: key);
 
-  static const String _title = 'Sample App';
+  static const String _title = 'SPAR Solutions';
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: _title,
       home: Scaffold(
-        appBar: AppBar(title: const Text(_title)),
+        appBar: AppBar(title: const Text(_title),backgroundColor: Colors.green,),
         body: const MyStatefulWidget(),
       ),
     );
@@ -40,9 +40,9 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 alignment: Alignment.center,
                 padding: const EdgeInsets.all(10),
                 child: const Text(
-                  'TutorialKart',
+                  'Vidyut Kosh',
                   style: TextStyle(
-                      color: Colors.blue,
+                      color: Colors.green,
                       fontWeight: FontWeight.w500,
                       fontSize: 30),
                 )),
@@ -51,7 +51,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 padding: const EdgeInsets.all(10),
                 child: const Text(
                   'Sign in',
-                  style: TextStyle(fontSize: 20),
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.normal, color: Colors.blueAccent),
                 )),
             Container(
               padding: const EdgeInsets.all(10),
@@ -84,6 +84,9 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 height: 50,
                 padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
                 child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.green, // Background color
+                  ),
                   child: const Text('Login'),
                   onPressed: () {
                     print(nameController.text);
